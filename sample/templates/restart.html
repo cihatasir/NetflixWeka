@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Result {% endblock title %}
+
+{% block content %}
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <h1 class="display-4 mt-5 border-bottom">Past Results</h1>
+                <br>
+
+                {% for i in all_films %}
+                    {{ i.all_films_result }}
+                    <br>
+                {% endfor %}
+
+                <a href="{% url 'delete' %}"><button type="button" class="btn btn-outline-danger mb-4 mt-3">Clear Past Results</button></a>
+
+                <br>
+                <p class="lead border-top">Please restart server If you want new film suggestion.</p>
+             </div>
+
+            <div class="col-sm-3"></div>
+        </div>
+
+    </div>
+
+{% endblock %}
+

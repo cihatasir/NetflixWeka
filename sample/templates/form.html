@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Netflix Film Önerisi {% endblock title %}
+
+{% block content %}
+
+    <div class="container text-center">
+        <form method="POST" class="p-5">
+            {% csrf_token %}
+            {{ form }}
+             <input type="submit" class="btn btn-success mt-3 mb-3" value=" Send" />
+            {{ result }}
+        </form>
+
+    </div>
+
+{% endblock %}
